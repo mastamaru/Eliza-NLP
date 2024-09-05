@@ -1,6 +1,9 @@
 import re
 import random
 
+import re
+import random
+
 pairs = {
     "hello" : ["Halo, bagaimana perasaanmu hari ini?", "Hai, bagaimana saya bisa membantumu hari ini?"],
 
@@ -123,6 +126,29 @@ pairs = {
         "Beberapa {0} terdengar cukup lama. Apakah ada perubahan atau pola yang kamu amati selama waktu tersebut?",
         "Apakah ada sesuatu yang terjadi selama beberapa {0} terakhir yang menurutmu berpengaruh pada perasaan ini?"
     ],
+
+    "(.*)hibur(.*)": [
+    "Saya di sini untukmu. Apakah kamu ingin mendengar sesuatu yang menenangkan?",
+    "Tentu, saya akan melakukan yang terbaik untuk menghiburmu. Apa yang biasanya membuatmu merasa lebih baik?",
+    "Tidak apa-apa untuk merasa sedih, tapi kamu juga berhak merasa nyaman. Apa yang bisa saya lakukan untuk menghiburmu?",
+    "Kadang-kadang, berbicara tentang perasaan bisa membantu. Apakah ada sesuatu yang ingin kamu ceritakan lebih lanjut?",
+    "Saya di sini, kamu tidak sendirian. Mungkin berbicara tentang hal yang membuatmu tersenyum bisa membantu. Apa yang biasanya membuatmu bahagia?"
+    ],
+
+    "(.*)hiburkan(.*)": [
+        "Tentu, saya akan mencoba membantu. Apa yang kamu butuhkan saat ini?",
+        "Saya di sini untuk mendukungmu. Apa yang biasanya membantu membuatmu merasa lebih baik?",
+        "Mungkin mendengar kata-kata yang menenangkan bisa membantu. Ingat, kamu berharga dan tidak sendirian.",
+        "Bernafas dalam-dalam dan mari kita bicarakan hal-hal yang membuatmu merasa lebih baik. Apa yang kamu pikir bisa menghiburmu?"
+    ],
+
+    "(.*)sedih(.*)hibur(.*)": [
+        "Saya turut sedih mendengarnya. Mari kita coba membuatmu merasa lebih baik. Apa yang biasanya membantumu merasa lebih tenang?",
+        "Tidak apa-apa merasa sedih. Saya di sini untuk mendengarkan dan menghiburmu. Apa yang bisa saya lakukan untuk membantu?",
+        "Kadang-kadang, ketika kita merasa sedih, hanya perlu seseorang untuk mendengarkan. Saya ada di sini, kamu ingin bercerita lebih lanjut?",
+        "Kesedihan bisa terasa berat. Bagaimana jika kita bicarakan hal-hal yang bisa membantumu merasa lebih baik?"
+    ],
+
 
     "": [
         "Tolong ceritakan lebih banyak.",
