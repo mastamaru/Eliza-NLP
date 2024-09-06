@@ -327,18 +327,18 @@ pairs = {
     ## General Template
 
     "(saya|aku|gue)(.*)merasa(.*)": [
-        "Mengapa kamu merasa {0}?",
-        "Saya turut sedih mendengar bahwa kamu merasa {0}, bisakah kamu ceritakan lebih banyak tentang hal itu?",
-        "Sepertinya kamu sedang merasa {0}. Sudah berapa lama kamu merasa seperti ini?",
-        "Apa yang menurutmu mungkin menyebabkanmu merasa {0}?",
+        "Mengapa kamu merasa {2}?",
+        "Saya turut sedih mendengar bahwa kamu merasa {2}, bisakah kamu ceritakan lebih banyak tentang hal itu?",
+        "Sepertinya kamu sedang merasa {2}. Sudah berapa lama kamu merasa seperti ini?",
+        "Apa yang menurutmu mungkin menyebabkanmu merasa {2}?",
         "Terima kasih telah berbagi tentang perasaanmu. Saya di sini untuk mendengarkan."
     ],
 
     "(saya|aku|gue) (.*)": [
-        "Mengapa kamu merasa {0}?",
-        "Sudah berapa lama kamu merasa {0}?",
-        "Saya di sini untukmu. Bisakah kamu ceritakan lebih lanjut tentang perasaan {0}?",
-        "Tidak apa-apa merasa {0}. Kadang-kadang, emosi bisa sangat kuat, dan itu wajar."
+        "Mengapa kamu merasa {1}?",
+        "Sudah berapa lama kamu merasa {1}?",
+        "Saya di sini untukmu. Bisakah kamu ceritakan lebih lanjut tentang perasaan {1}?",
+        "Tidak apa-apa merasa {1}. Kadang-kadang, emosi bisa sangat kuat, dan itu wajar."
     ],
 
     ## Support or Bridging Template
@@ -351,17 +351,10 @@ pairs = {
     ],
 
     "(.*)sejak (.*)": [
-        "Sejak {0}? Itu waktu yang cukup lama. Apa yang kamu rasakan selama ini?",
-        "Sudah sejak {0}, ya? Bagaimana kamu menghadapi perasaan ini sejauh ini?",
-        "Saya paham bahwa kamu telah merasakan ini sejak {0}. Apakah kamu ingin berbicara lebih lanjut tentang hal itu?",
-        "Sejak {0}, apakah kamu melihat ada perubahan dalam intensitas perasaanmu?"
-    ],
-
-    "(.*)beberapa (hari|minggu|bulan|tahun)(.*)": [
-        "Beberapa {0} bisa menjadi waktu yang lama untuk menghadapi perasaan seperti ini. Apa yang menurutmu membuat hal ini terus berlanjut?",
-        "Selama beberapa {0}, apakah kamu menemukan cara untuk mengelola perasaan ini?",
-        "Beberapa {0} terdengar cukup lama. Apakah ada perubahan atau pola yang kamu amati selama waktu tersebut?",
-        "Apakah ada sesuatu yang terjadi selama beberapa {0} terakhir yang menurutmu berpengaruh pada perasaan ini?"
+        "Sejak {1}? Itu waktu yang cukup lama. Apa yang kamu rasakan selama ini?",
+        "Sudah sejak {1}, ya? Bagaimana kamu menghadapi perasaan ini sejauh ini?",
+        "Saya paham bahwa kamu telah merasakan ini sejak {1}. Apakah kamu ingin berbicara lebih lanjut tentang hal itu?",
+        "Sejak {1}, apakah kamu melihat ada perubahan dalam intensitas perasaanmu?"
     ],
 
     "(.*)mempengaruhi(.*)": [
@@ -372,10 +365,10 @@ pairs = {
     ],
 
     "(.*)(hari|minggu|bulan) ini(.*)": [
-        "Selama {0} ini, bagaimana perasaanmu? Apakah ada hal yang mempengaruhi perasaanmu?",
+        "Selama {0} {1} ini, bagaimana perasaanmu? Apakah ada hal yang mempengaruhi perasaanmu?",
         "Hari ini, minggu ini, atau bulan ini, apakah ada sesuatu yang spesifik mempengaruhi bagaimana kamu merasa?",
-        "Apa yang terjadi dalam {0} ini yang mungkin mempengaruhi perasaanmu?",
-        "Selama {0} ini, bagaimana cara kamu mengatasi perasaanmu? Apakah ada hal baru yang terjadi?"
+        "Apa yang terjadi dalam {0} {1} ini yang mungkin mempengaruhi perasaanmu?",
+        "Selama {0} {1}ini, bagaimana cara kamu mengatasi perasaanmu? Apakah ada hal baru yang terjadi?"
     ],
 
     "(.*)baru (saja|terakhir)(.*)": [
@@ -400,10 +393,10 @@ pairs = {
     ],
 
     "(.*)(selama|selama ini)(.*)": [
-        "Selama {0}, apakah ada hal-hal yang membantumu mengatasi perasaan ini?",
+        "Selama {1}, apakah ada hal-hal yang membantumu mengatasi perasaan ini?",
         "Selama waktu ini, apakah kamu menemukan cara baru untuk menghadapi perasaanmu?",
-        "Apa yang sudah terjadi selama {0} yang mungkin mempengaruhi perasaanmu?",
-        "Bagaimana kamu mengatasi perasaanmu selama {0} waktu ini?"
+        "Apa yang sudah terjadi selama {1} yang mungkin mempengaruhi perasaanmu?",
+        "Bagaimana kamu mengatasi perasaanmu selama {1} waktu ini?"
     ],
 
     "(.*)terakhir kali (.*)": [
@@ -463,10 +456,10 @@ pairs = {
     ],
 
     "(.*)setelah (.*)": [
-        "Setelah {0}, bagaimana perasaanmu?",
-        "Apa yang berubah setelah {0} yang mungkin mempengaruhi perasaanmu?",
-        "Sejak {0}, adakah hal yang menjadi lebih baik atau lebih buruk?",
-        "Setelah {0}, apa yang kamu lakukan untuk mengatasi perasaan ini?"
+        "Setelah {1}, bagaimana perasaanmu?",
+        "Apa yang berubah setelah {1} yang mungkin mempengaruhi perasaanmu?",
+        "Sejak {1}, adakah hal yang menjadi lebih baik atau lebih buruk?",
+        "Setelah {1}, apa yang kamu lakukan untuk mengatasi perasaan ini?"
     ],
 
     "(.*)tidak(.*)": [
@@ -496,6 +489,7 @@ pairs = {
 def match_response(input):
     for pattern, responses in pairs.items():
         match = re.match(pattern, input.lower())
+        print(match)
         if match:
             response = random.choice(responses)
             return response.format(*match.groups())
